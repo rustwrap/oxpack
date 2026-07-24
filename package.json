@@ -1,0 +1,42 @@
+{
+  "name": "@rustwrap/eslint",
+  "version": "1.0.6",
+  "description": "A drop-in ESLint replacement (CLI + Node API) backed by the Rust-based oxlint for very fast linting. Honors .eslintrc(.json/.js/.yml), package.json#eslintConfig, flat eslint.config.js, and .eslintignore.",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "node test/run.js"
+  },
+  "bin": {
+    "eslint": "bin/rustwrap-eslint.js",
+    "rustwrap-eslint": "bin/rustwrap-eslint.js"
+  },
+  "files": [
+    "lib/",
+    "bin/",
+    "README.md"
+  ],
+  "dependencies": {
+    "eslint-compat": "npm:eslint@8.57.1",
+    "fast-glob": "^3.3.2",
+    "js-yaml": "^4.1.0",
+    "micromatch": "^4.0.8",
+    "oxlint": "1.71.0"
+  },
+  "keywords": [
+    "eslint",
+    "oxlint",
+    "linter",
+    "oxc",
+    "pcf"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  },
+  "devDependencies": {
+    "eslint": "8.57.1"
+  }
+}
